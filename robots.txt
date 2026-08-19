@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jardimcumuru.com.br/sitemap.xml
+Sitemap: https://jardimcumuru.com.br/sitemap.xml
