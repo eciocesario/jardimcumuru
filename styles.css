@@ -189,7 +189,7 @@ section[id]{scroll-margin-top:74px}
 .split__body .btn{margin-top:1.2rem}
 
 /* ---------- Tiles de experiência (foto + legenda) ---------- */
-.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.1rem}
 .exp{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 14px 40px rgba(28,38,30,.14);background:#2f4a34}
 .exp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
 .exp:hover img{transform:scale(1.08)}
@@ -316,4 +316,35 @@ html.js .reveal.in{opacity:1;transform:none}
   .reveal{opacity:1;transform:none}
   .hero__slides img{opacity:1}
   .hero__slides img:nth-child(n+2){opacity:0}
+}
+
+/* ---------- Suítes: dois tipos (cartões) ---------- */
+.suite-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.6rem}
+.suite-card{background:var(--marfim);border:1px solid rgba(176,141,87,.18);border-radius:6px;overflow:hidden;box-shadow:0 12px 36px rgba(40,50,42,.08)}
+.suite-card__media{aspect-ratio:4/3;overflow:hidden;background:linear-gradient(160deg,#6f8a74,#2f4a34)}
+.suite-card__media img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.suite-card:hover .suite-card__media img{transform:scale(1.05)}
+.suite-card__body{padding:1.8rem}
+.suite-card__body h3{font-size:1.6rem;color:var(--verde-fundo);margin-bottom:.25rem}
+.suite-card__cap{font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado);margin-bottom:1rem}
+.suite-card__body ul{list-style:none;display:flex;flex-wrap:wrap;gap:.55rem 1.4rem}
+.suite-card__body li{font-size:.94rem;color:var(--tinta-suave);display:flex;align-items:center;gap:.5rem}
+.suite-card__body li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dourado);flex:none}
+
+/* ---------- Destino: sub-blocos ---------- */
+.destino-mais{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem 2.6rem;max-width:860px;margin:2.4rem auto 0;text-align:left}
+.destino-mais h3{font-family:var(--sans);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado-claro);margin-bottom:.4rem}
+.destino-mais p{color:rgba(243,237,224,.82);font-size:.98rem;line-height:1.6}
+
+/* ---------- Onde estamos (localização) ---------- */
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:2.4rem}
+.local-grid .contact-map{min-height:320px}
+.local-text p{color:var(--tinta-suave);margin-bottom:1rem;font-size:1.04rem}
+
+@media (max-width:820px){
+  .suite-grid{grid-template-columns:1fr}
+  .local-grid{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .destino-mais{grid-template-columns:1fr}
 }
