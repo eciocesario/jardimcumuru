@@ -159,7 +159,7 @@ section[id]{scroll-margin-top:74px}
   color:var(--verde-fundo);max-width:960px;margin:0 auto;
 }
 .statement .big em{color:var(--terracota);font-style:normal}
-.statement .sub{max-width:680px;margin:1.8rem auto 0;color:var(--tinta-suave);font-size:1.05rem}
+.statement .sub{max-width:720px;margin:1.4rem auto 0;color:var(--tinta-suave);font-size:1.05rem;text-align:left}
 
 /* ---------- Faixa full-bleed com imagem ---------- */
 .fullbleed{
@@ -327,7 +327,7 @@ html.js .reveal.in{opacity:1;transform:none}
 .suite-card__body{padding:1.8rem}
 .suite-card__body h3{font-size:1.6rem;color:var(--verde-fundo);margin-bottom:.25rem}
 .suite-card__cap{font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado);margin-bottom:1rem}
-.suite-card__body ul{list-style:none;display:flex;flex-wrap:wrap;gap:.55rem 1.4rem}
+.suite-card__body ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
 .suite-card__body li{font-size:.94rem;color:var(--tinta-suave);display:flex;align-items:center;gap:.5rem}
 .suite-card__body li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dourado);flex:none}
 
